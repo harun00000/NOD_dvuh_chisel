@@ -1,27 +1,15 @@
 #include <stdio.h>
-
-// Функция вычисления НОД по алгоритму Евклида
-int gcd(int a, int b) {
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
-}
+#include "evclid.h"
+#include "input_check.h"
 
 int main() {
-    int num1, num2;
+    int num1=0, num2=0, result=0;
+    printf("Input 2 different numbers");
+    void input_check(int count, int num1, int num2);
 
-    printf("Введите два целых числа: ");
-    if (scanf("%d %d", &num1, &num2) != 2) {
-        printf("Ошибка ввода.\n");
-        return 1;
-    }
+    int result = evclid(num1, num2);
 
-    int result = gcd(num1, num2);
-
-    printf("НОД чисел %d и %d равен %d\n", num1, num2, result);
+    printf("NOD chisel is %d\n", result);
 
     return 0;
 }
