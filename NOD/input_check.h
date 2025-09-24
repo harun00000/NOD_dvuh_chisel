@@ -1,1 +1,1 @@
-void input_check(int count, int num1, int num2);
+void input_check(int count, int* num1, int* num2);
